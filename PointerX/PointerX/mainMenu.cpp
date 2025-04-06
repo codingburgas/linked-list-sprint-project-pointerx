@@ -5,6 +5,7 @@
 #include <limits>
 #include "event.h"
 #include "search.h"
+#include "edit.h"
 
 void showMainMenu(Node*& head) {
     system("cls");
@@ -46,6 +47,7 @@ void showMainMenu(Node*& head) {
             break;
         case 3:
             std::cout << "\n✏️ Edit event (coming soon)\n";
+            editEvent(head);
             break;
         case 4:
             std::cout << "\n🗑️ Delete event (coming soon)\n";

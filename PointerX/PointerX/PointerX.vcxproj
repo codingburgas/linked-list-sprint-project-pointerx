@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="edit.cpp" />
     <ClCompile Include="event.cpp" />
     <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="PointerX.cpp" />
     <ClCompile Include="search.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="edit.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="mainMenu.h" />
     <ClInclude Include="search.h" />
