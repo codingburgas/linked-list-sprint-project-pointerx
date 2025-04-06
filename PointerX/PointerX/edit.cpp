@@ -1,11 +1,9 @@
-
 #include <iostream>
 #include <string>
 #include <vector>
 #include <fstream>
 #include <algorithm>
 #include <limits>
-#include <direct.h>
 #include "structs.h"
 #include "event.h"
 
@@ -14,32 +12,6 @@ std::string toLowerEdit(const std::string& s) {
     std::transform(result.begin(), result.end(), result.begin(),
                    [](unsigned char c){ return std::tolower(c); });
     return result;
-}
-
-// Презаписва целия свързан списък обратно в events.txt
-void overwriteFile(const Node* head) {
-    _mkdir("..\\..\\data");
-    std::ofstream out("..\\..\\data\\events.txt", std::ios::trunc);
-    if (!out) {
-        std::cerr << "Error overwriting events.txt!" << std::endl;
-        return;
-    }
-
-    const Node* current = head;
-    while (current) {
-        const Event& e = current->data;
-        out << e.date << "\n";
-        out << e.topic << "\n";
-        out << e.title << "\n";
-        out << e.location << "\n";
-        out << e.leader << "\n";
-        out << e.participants << "\n";
-        out << e.outcome << "\n";
-        out << "---\n";
-        current = current->next;
-    }
-
-    out.close();
 }
 
 void editEvent(Node*& head) {

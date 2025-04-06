@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -136,4 +135,29 @@ void clearList(Node*& head) {
         head = head->next;
         delete temp;
     }
+}
+
+void overwriteFile(const Node* head) {
+    _mkdir("..\\..\\data");
+    std::ofstream out("..\\..\\data\\events.txt", std::ios::trunc);
+    if (!out) {
+        std::cerr << "Error overwriting events.txt!" << std::endl;
+        return;
+    }
+
+    const Node* current = head;
+    while (current) {
+        const Event& e = current->data;
+        out << e.date << "\n";
+        out << e.topic << "\n";
+        out << e.title << "\n";
+        out << e.location << "\n";
+        out << e.leader << "\n";
+        out << e.participants << "\n";
+        out << e.outcome << "\n";
+        out << "---\n";
+        current = current->next;
+    }
+
+    out.close();
 }

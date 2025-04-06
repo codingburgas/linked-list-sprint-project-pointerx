@@ -6,6 +6,7 @@
 #include "event.h"
 #include "search.h"
 #include "edit.h"
+#include "delete.h"
 
 void showMainMenu(Node*& head) {
     system("cls");
@@ -51,6 +52,7 @@ void showMainMenu(Node*& head) {
             break;
         case 4:
             std::cout << "\n🗑️ Delete event (coming soon)\n";
+            deleteEvent(head);
             break;
         case 5:
             std::cout << "\n📋 List of all events:\n";

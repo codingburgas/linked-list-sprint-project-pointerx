@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="delete.cpp" />
     <ClCompile Include="edit.cpp" />
     <ClCompile Include="event.cpp" />
     <ClCompile Include="mainMenu.cpp" />
@@ -134,6 +135,7 @@
     <ClCompile Include="search.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="delete.h" />
     <ClInclude Include="edit.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="mainMenu.h" />
