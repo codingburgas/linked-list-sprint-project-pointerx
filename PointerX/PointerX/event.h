@@ -2,27 +2,14 @@
 #ifndef EVENT_H
 #define EVENT_H
 
-#include <string>
-using namespace std;
+#include "structs.h"
 
-struct Event {
-    string date;       // ключово поле (може да бъде само година или месец/година)
-    string topic;
-    string title;
-    string location;
-    string leader;
-    string participants;
-    string outcome;
-};
-
-struct Node {
-    Event data;
-    Node* next;
-};
-
-// Основни функции
+Event createEventFromInput();
 void addEventSorted(Node*& head);
-void printAllEvents(const Node* head); // за тестване
-void clearList(Node*& head); // освобождаване на паметта
+void addEventSorted(Node*& head, Node* newNode);
+void printAllEvents(const Node* head);
+void clearList(Node*& head);
+void saveEventToFile(const Event& e);
+void loadEventsFromFile(Node*& head);
 
 #endif

@@ -5,9 +5,7 @@
 #include <limits>
 #include "event.h"
 
-Node* head = nullptr;
-
-void showMainMenu() {
+void showMainMenu(Node*& head) {
     system("cls");
 
     std::ifstream file("../../interface/mainMenu.txt");
@@ -56,9 +54,7 @@ void showMainMenu() {
             break;
         case 6:
             std::cout << "\n👋 Изход от програмата. Освобождаване на памет...\n";
-            clearList(head);
-            exit(0);
-            break;
+            return;
         default:
             std::cout << "\nМоля въведете валидно число от 1 до 6.\n";
     }
@@ -66,5 +62,5 @@ void showMainMenu() {
     std::cout << "\nНатиснете Enter за връщане в менюто...";
     std::cin.ignore();
     std::cin.get();
-    showMainMenu();
+    showMainMenu(head);
 }

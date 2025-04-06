@@ -1,6 +1,9 @@
-﻿#ifndef MAINMENU_H
+
+#ifndef MAINMENU_H
 #define MAINMENU_H
 
-void showMainMenu();
+#include "structs.h"
+
+void showMainMenu(Node*& head);
 
 #endif
