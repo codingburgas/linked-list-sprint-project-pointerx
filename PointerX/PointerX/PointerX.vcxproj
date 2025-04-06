@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="event.cpp" />
     <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="PointerX.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="event.h" />
     <ClInclude Include="mainMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
