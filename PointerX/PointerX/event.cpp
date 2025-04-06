@@ -69,20 +69,20 @@ void loadEventsFromFile(Node*& head) {
 
     while (std::getline(in, line)) {
         if (line == "---") {
-            Node* newNode = new Node{e, nullptr};
+            Node* newNode = new Node{ e, nullptr };
             addEventSorted(head, newNode);
             fieldCount = 0;
             continue;
         }
 
         switch (fieldCount) {
-            case 0: e.date = line; break;
-            case 1: e.topic = line; break;
-            case 2: e.title = line; break;
-            case 3: e.location = line; break;
-            case 4: e.leader = line; break;
-            case 5: e.participants = line; break;
-            case 6: e.outcome = line; break;
+        case 0: e.date = line; break;
+        case 1: e.topic = line; break;
+        case 2: e.title = line; break;
+        case 3: e.location = line; break;
+        case 4: e.leader = line; break;
+        case 5: e.participants = line; break;
+        case 6: e.outcome = line; break;
         }
         fieldCount++;
     }
@@ -92,7 +92,7 @@ void loadEventsFromFile(Node*& head) {
 
 void addEventSorted(Node*& head) {
     Event newEvent = createEventFromInput();
-    Node* newNode = new Node{newEvent, nullptr};
+    Node* newNode = new Node{ newEvent, nullptr };
     addEventSorted(head, newNode);
     saveEventToFile(newEvent);
 }
@@ -114,6 +114,10 @@ void addEventSorted(Node*& head, Node* newNode) {
 }
 
 void printAllEvents(const Node* head) {
+    system("cls");
+    std::cout << "Your choice: 5\n\n";
+    std::cout << "📋 List of all events:\n";
+
     const Node* current = head;
     while (current) {
         const Event& e = current->data;
@@ -127,6 +131,10 @@ void printAllEvents(const Node* head) {
         std::cout << "🏁 Outcome: " << e.outcome << "\n";
         current = current->next;
     }
+
+    std::cout << "\nPress Enter to return to the main menu...";
+    std::cin.ignore();
+    std::cin.get();
 }
 
 void clearList(Node*& head) {
