@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <fstream>
 #include <sstream>
-#include <direct.h> // за _mkdir
+#include <direct.h>
 #include "event.h"
 
 const char* DATA_FOLDER = "..\\..\\data";
@@ -11,27 +11,27 @@ const char* DATA_FILE = "..\\..\\data\\events.txt";
 
 Event createEventFromInput() {
     Event e;
-    std::cout << "\n\t🗓️ Въведи дата (напр. 1876 или 04.1876): ";
+    std::cout << "\n\t🗓️ Enter date (e.g. 1876 or 04.1876): ";
     std::getline(std::cin >> std::ws, e.date);
 
-    std::cout << "\t📚 Въведи тема: ";
+    std::cout << "\t📚 Enter topic: ";
     std::getline(std::cin, e.topic);
 
-    std::cout << "\t📝 Въведи заглавие: ";
+    std::cout << "\t📝 Enter title: ";
     std::getline(std::cin, e.title);
 
-    std::cout << "\t📍 Въведи място: ";
+    std::cout << "\t📍 Enter location: ";
     std::getline(std::cin, e.location);
 
-    std::cout << "\t👤 Въведи лидер: ";
+    std::cout << "\t👤 Enter leader: ";
     std::getline(std::cin, e.leader);
 
-    std::cout << "\t👥 Въведи участници\n";
-    std::cout << "\t    👉 Пример: Съюзници: Русия, България | Противници: Османска империя\n";
-    std::cout << "\t    Участници: ";
+    std::cout << "\t👥 Enter participants\n";
+    std::cout << "\t    👉 Example: Allies: Russia, Bulgaria | Opponents: Ottoman Empire\n";
+    std::cout << "\t    Participants: ";
     std::getline(std::cin, e.participants);
 
-    std::cout << "\t🏁 Въведи резултат: ";
+    std::cout << "\t🏁 Enter outcome: ";
     std::getline(std::cin, e.outcome);
 
     return e;
@@ -42,11 +42,10 @@ bool isDateBefore(const std::string& d1, const std::string& d2) {
 }
 
 void saveEventToFile(const Event& e) {
-    _mkdir(DATA_FOLDER); // създава папка ако не съществува
-
+    _mkdir(DATA_FOLDER);
     std::ofstream out(DATA_FILE, std::ios::app);
     if (!out) {
-        std::cerr << "❌ Неуспешен запис във файла events.txt!" << std::endl;
+        std::cerr << "❌ Failed to write to events.txt!" << std::endl;
         return;
     }
 
@@ -58,7 +57,6 @@ void saveEventToFile(const Event& e) {
     out << e.participants << "\n";
     out << e.outcome << "\n";
     out << "---\n";
-
     out.close();
 }
 
@@ -121,13 +119,13 @@ void printAllEvents(const Node* head) {
     while (current) {
         const Event& e = current->data;
         std::cout << "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
-        std::cout << "🗓️ Дата: " << e.date << "\n";
-        std::cout << "📚 Тема: " << e.topic << "\n";
-        std::cout << "📝 Заглавие: " << e.title << "\n";
-        std::cout << "📍 Място: " << e.location << "\n";
-        std::cout << "👤 Лидер: " << e.leader << "\n";
-        std::cout << "🤝 Участници: " << e.participants << "\n";
-        std::cout << "🏁 Резултат: " << e.outcome << "\n";
+        std::cout << "🗓️ Date: " << e.date << "\n";
+        std::cout << "📚 Topic: " << e.topic << "\n";
+        std::cout << "📝 Title: " << e.title << "\n";
+        std::cout << "📍 Location: " << e.location << "\n";
+        std::cout << "👤 Leader: " << e.leader << "\n";
+        std::cout << "🤝 Participants: " << e.participants << "\n";
+        std::cout << "🏁 Outcome: " << e.outcome << "\n";
         current = current->next;
     }
 }

@@ -4,6 +4,7 @@
 #include <string>
 #include <limits>
 #include "event.h"
+#include "search.h"
 
 void showMainMenu(Node*& head) {
     system("cls");
@@ -21,45 +22,47 @@ void showMainMenu(Node*& head) {
     file.close();
 
     int choice;
-    std::cout << "\nВашият избор: ";
+    std::cout << "\nYour choice: ";
     std::cin >> choice;
 
     if (std::cin.fail()) {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "\nНевалиден избор. Моля въведете число от 1 до 6.\n";
+        std::cout << "\nInvalid input. Please enter a number between 1 and 6.\n";
         return;
     }
 
     switch (choice) {
         case 1:
-            std::cout << "\n📌 Добавяне на ново събитие\n";
-            std::cin.ignore(); // изчистване на буфера
+            std::cout << "\n📌 Add new event\n";
+            std::cin.ignore();
             system("cls");
-            std::cout << "Вашият избор: 1\n\n📌 Добавяне на ново събитие\n";
+            std::cout << "Your choice: 1\n\n📌 Add new event\n";
             addEventSorted(head);
             break;
         case 2:
-            std::cout << "\n🔍 Търсене по дата или тема (в процес на разработка)\n";
+            std::cout << "\n🔍 Search by date or topic\n";
+            searchEvents(head);
             break;
         case 3:
-            std::cout << "\n✏️ Редактиране на събитие (в процес на разработка)\n";
+            std::cout << "\n✏️ Edit event (coming soon)\n";
             break;
         case 4:
-            std::cout << "\n🗑️ Изтриване на събитие (в процес на разработка)\n";
+            std::cout << "\n🗑️ Delete event (coming soon)\n";
             break;
         case 5:
-            std::cout << "\n📋 Списък на всички събития:\n";
+            std::cout << "\n📋 List of all events:\n";
             printAllEvents(head);
             break;
         case 6:
-            std::cout << "\n👋 Изход от програмата. Освобождаване на памет...\n";
+            std::cout << "\n👋 Exiting the program. Freeing memory...\n";
+            clearList(head);
             return;
         default:
-            std::cout << "\nМоля въведете валидно число от 1 до 6.\n";
+            std::cout << "\nPlease enter a valid number between 1 and 6.\n";
     }
 
-    std::cout << "\nНатиснете Enter за връщане в менюто...";
+    std::cout << "\nPress Enter to return to the main menu...";
     std::cin.ignore();
     std::cin.get();
     showMainMenu(head);
