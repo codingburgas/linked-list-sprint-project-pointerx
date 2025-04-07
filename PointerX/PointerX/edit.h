@@ -1,9 +1,6 @@
-
-#ifndef EDIT_H
-#define EDIT_H
+#pragma once
 
 #include "structs.h"
 
 void editEvent(Node*& head);
 
-#endif

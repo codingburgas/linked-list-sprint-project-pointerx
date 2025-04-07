@@ -1,9 +1,7 @@
 
-#ifndef DELETE_H
-#define DELETE_H
+#pragma once
 
 #include "structs.h"
 
 void deleteEvent(Node*& head);
 
-#endif

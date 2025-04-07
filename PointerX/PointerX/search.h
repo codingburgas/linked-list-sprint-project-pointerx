@@ -1,9 +1,7 @@
-
-#ifndef SEARCH_H
-#define SEARCH_H
+#pragma once
 
 #include "structs.h"
 
 void searchEvents(const Node* head);
 
-#endif
+

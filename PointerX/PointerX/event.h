@@ -1,6 +1,4 @@
-
-#ifndef EVENT_H
-#define EVENT_H
+#pragma once
 
 #include "structs.h"
 
@@ -13,4 +11,3 @@ void saveEventToFile(const Event& e);
 void loadEventsFromFile(Node*& head);
 void overwriteFile(const Node* head); // добавена декларация
 
-#endif

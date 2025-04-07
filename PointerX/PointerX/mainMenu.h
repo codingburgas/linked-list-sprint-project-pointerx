@@ -1,9 +1,7 @@
-
-#ifndef MAINMENU_H
-#define MAINMENU_H
+#pragma once
 
 #include "structs.h"
 
 void showMainMenu(Node*& head);
 
-#endif
+
