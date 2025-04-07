@@ -1,21 +1,22 @@
-
-#include <windows.h>
-#include <iostream>
-#include "event.h"
-#include "mainMenu.h"
+#include <windows.h>       
+#include <iostream>       
+#include "event.h"         
+#include "mainMenu.h"      
 
 int main() {
+    //Set console to use UTF-8 encoding to support special characters and emojis
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    Node* head = nullptr;
+    Node* head = nullptr;  // Initialize the head of the linked list to store events
 
-    // Зареждане от файл преди показване на менюто
+    //Load all events from file before showing the menu
     loadEventsFromFile(head);
 
+    // Start the main menu loop (user interaction begins here)
     showMainMenu(head);
 
-    // Освобождаваме паметта при изход
+    // Clean up memory before exiting the program
     clearList(head);
 
     return 0;

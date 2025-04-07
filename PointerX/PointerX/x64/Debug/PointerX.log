@@ -1,7 +1,5 @@
 ﻿  PointerX.cpp
-  delete.cpp
-  edit.cpp
-  event.cpp
   mainMenu.cpp
+  search.cpp
   Generating Code...
   PointerX.vcxproj -> C:\Users\User\source\repos\linked-list-sprint-project-pointerx\PointerX\x64\Debug\PointerX.exe
