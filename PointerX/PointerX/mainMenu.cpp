@@ -67,7 +67,6 @@ void showMainMenu(Node*& head) {
     }
 
     std::cout << "\nPress Enter to return to the main menu...";
-    std::cin.ignore();
     std::cin.get();
     showMainMenu(head);
 }
