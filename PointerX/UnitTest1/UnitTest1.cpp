@@ -34,6 +34,7 @@ namespace UnitTest1
 
 		}
 	};
+
 	TEST_CLASS(class2)
 	{
 	public:
@@ -46,6 +47,14 @@ namespace UnitTest1
 			editEvent(head);
 
 
+		}
+
+		TEST_METHOD(TestMethod4)
+		{
+			Node* head = new Node{ {"2025-05-01", "Initial Title", "Initial Topic"}, nullptr };
+			deleteEvent(head);
+
+			Assert::AreEqual("2025-05-01", head->data.date.c_str());
 		}
 	};
 
