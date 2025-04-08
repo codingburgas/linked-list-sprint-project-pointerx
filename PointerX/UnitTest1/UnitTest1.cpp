@@ -23,6 +23,16 @@ namespace UnitTest1
 
 		}
 
+		TEST_METHOD(TestMethod3)
+		{
+			Node* head = new Node{ {"2025-05-01", "Initial Title", "Initial Topic"}, nullptr };
+
+			printAllEvents(head);
+
+			Assert::AreEqual("2025-05-01", head->data.date.c_str());
+
+
+		}
 	};
 	TEST_CLASS(class2)
 	{
