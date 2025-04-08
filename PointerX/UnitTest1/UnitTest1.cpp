@@ -24,5 +24,19 @@ namespace UnitTest1
 		}
 
 	};
+	TEST_CLASS(class2)
+	{
+	public:
+
+		TEST_METHOD(TestMethod2)
+		{
+			Node* head = new Node{ {"2025-05-01", "Initial Title", "Initial Topic"}, nullptr };
+			addEventSorted(head);
+
+			editEvent(head);
+
+
+		}
+	};
 
 }
