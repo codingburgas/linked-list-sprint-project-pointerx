@@ -31,11 +31,11 @@ through linked lists in C++.
 - <img src = "https://brandslogos.com/wp-content/uploads/thumbs/microsoft-excel-2013-logo-vector.svg" width = "30px">[Excel](https://www.microsoft.com/en-us/microsoft-365/excel) - QA Documentation
 
 
-## 📄 Documents
+## 📄 Documents<a name="documents"></a>
   <ul>
-    <li><a href="docs/PointerX.docx">🧾 Documentation</a></li>
-    <li><a href="docs/PointerX.pptx">📰 Presentation</a></li>
-    <li><a href="docs/PointerX.xlsx">📝 QA table</a></li>
+    <li><a href="https://github.com/codingburgas/linked-list-sprint-project-pointerx/raw/refs/heads/main/docs/PointerX.docx">🧾 Documentation</a></li>
+    <li><a href="https://github.com/codingburgas/linked-list-sprint-project-pointerx/raw/refs/heads/main/docs/PointerX.pptx">📰 Presentation</a></li>
+    <li><a href="https://github.com/codingburgas/linked-list-sprint-project-pointerx/raw/refs/heads/main/docs/PointerX.xlsx">📝 QA table</a></li>
    </ul>
    
 ## 🧑🏻‍💻 Contributors <a name="contributors"></a>
