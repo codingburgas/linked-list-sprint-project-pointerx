@@ -61,6 +61,14 @@ namespace UnitTest1
 
 			Assert::AreEqual("2025-05-01", head->data.date.c_str());
 		}
+
+		TEST_METHOD(TestMethod6)
+		{
+			Node* head = new Node{ {"2025-05-01", "Initial Title", "Initial Topic"}, nullptr };
+			showMainMenu(head);
+
+			Assert::AreEqual("2025-05-01", head->data.date.c_str());
+		}
 	};
 
 }
