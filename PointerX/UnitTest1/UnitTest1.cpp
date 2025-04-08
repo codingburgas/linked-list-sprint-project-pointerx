@@ -44,15 +44,20 @@ namespace UnitTest1
 			Node* head = new Node{ {"2025-05-01", "Initial Title", "Initial Topic"}, nullptr };
 			addEventSorted(head);
 
-			editEvent(head);
-
-
 		}
 
 		TEST_METHOD(TestMethod4)
 		{
 			Node* head = new Node{ {"2025-05-01", "Initial Title", "Initial Topic"}, nullptr };
 			deleteEvent(head);
+
+			Assert::AreEqual("2025-05-01", head->data.date.c_str());
+		}
+
+		TEST_METHOD(TestMethod5)
+		{
+			Node* head = new Node{ {"2025-05-01", "Initial Title", "Initial Topic"}, nullptr };
+			editEvent(head);
 
 			Assert::AreEqual("2025-05-01", head->data.date.c_str());
 		}
