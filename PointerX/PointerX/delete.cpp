@@ -97,3 +97,17 @@ void deleteEvent(Node*& head) {
     std::cout << "\nPress Enter to return to the main menu...";
     std::cin.get();
 }
+
+// Function to overwrite the event data to a file
+void overwriteFile(Node* head) {
+    std::ofstream file("events.txt");  // Open the file in write mode
+
+    Node* current = head;
+    while (current) {
+        // Write event data to file (can customize the format)
+        file << current->data.date << " - " << current->data.title << " - " << current->data.topic << std::endl;
+        current = current->next;
+    }
+
+    file.close(); // Close the file
+}
