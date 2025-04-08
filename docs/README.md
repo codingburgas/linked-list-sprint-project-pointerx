@@ -35,8 +35,7 @@ through linked lists in C++.
   <ul>
     <li><a href="https://github.com/codingburgas/linked-list-sprint-project-pointerx/raw/refs/heads/main/docs/PointerX.docx">🧾 Documentation</a></li>
     <li><a href="https://github.com/codingburgas/linked-list-sprint-project-pointerx/raw/refs/heads/main/docs/PointerX.pptx">📰 Presentation</a></li>
-    <li><a href="https://github.com/codingburgas/linked-list-sprint-project-pointerx/raw/refs/heads/main/docs/PointerX.xlsx">📝 QA table</a></li>
-   </ul>
+  
    
 ## 🧑🏻‍💻 Contributors <a name="contributors"></a>
 
