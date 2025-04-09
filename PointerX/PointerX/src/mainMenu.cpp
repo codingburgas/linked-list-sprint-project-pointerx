@@ -2,10 +2,10 @@
 #include <fstream>                
 #include <string>               
 #include <limits>                
-#include "event.h"              
-#include "search.h"             
-#include "edit.h"                
-#include "delete.h"              
+#include "../headers/event.h"              
+#include "../headers/search.h"             
+#include "../headers/edit.h"                
+#include "../headers/delete.h"              
 
 // Displays the main menu and handles user interaction
 void showMainMenu(Node*& head) {

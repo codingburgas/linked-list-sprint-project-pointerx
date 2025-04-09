@@ -1,7 +1,7 @@
 #include <windows.h>       
 #include <iostream>       
-#include "event.h"         
-#include "mainMenu.h"      
+#include "headers/event.h"         
+#include "headers/mainMenu.h"      
 
 int main() {
     //Set console to use UTF-8 encoding to support special characters and emojis

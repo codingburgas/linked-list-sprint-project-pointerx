@@ -18,36 +18,39 @@
     <ClCompile Include="PointerX.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mainMenu.cpp">
+    <ClCompile Include="src\delete.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="event.cpp">
+    <ClCompile Include="src\edit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="search.cpp">
+    <ClCompile Include="src\event.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="edit.cpp">
+    <ClCompile Include="src\mainMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="delete.cpp">
+    <ClCompile Include="src\search.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mainMenu.h">
+    <ClInclude Include="headers\delete.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="event.h">
+    <ClInclude Include="headers\edit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="search.h">
+    <ClInclude Include="headers\event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="edit.h">
+    <ClInclude Include="headers\mainMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="delete.h">
+    <ClInclude Include="headers\search.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\structs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

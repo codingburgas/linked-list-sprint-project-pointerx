@@ -2,7 +2,7 @@
 #include <string>
 #include <algorithm>
 #include <cstdlib>
-#include "structs.h"
+#include "../headers/structs.h"
 
 // Helper function to convert a string to lowercase (for case-insensitive comparisons)
 std::string toLower(const std::string& s) {

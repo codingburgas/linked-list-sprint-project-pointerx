@@ -4,8 +4,8 @@
 #include <fstream>      
 #include <algorithm>    
 #include <limits>      
-#include "structs.h"    
-#include "event.h"     
+#include "../headers/structs.h"    
+#include "../headers/event.h"     
 
 // Helper function: Converts a string to lowercase for case-insensitive search
 std::string toLowerEdit(const std::string& s) {

@@ -127,19 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="delete.cpp" />
-    <ClCompile Include="edit.cpp" />
-    <ClCompile Include="event.cpp" />
-    <ClCompile Include="mainMenu.cpp" />
     <ClCompile Include="PointerX.cpp" />
-    <ClCompile Include="search.cpp" />
+    <ClCompile Include="src\delete.cpp" />
+    <ClCompile Include="src\edit.cpp" />
+    <ClCompile Include="src\event.cpp" />
+    <ClCompile Include="src\mainMenu.cpp" />
+    <ClCompile Include="src\search.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="delete.h" />
-    <ClInclude Include="edit.h" />
-    <ClInclude Include="event.h" />
-    <ClInclude Include="mainMenu.h" />
-    <ClInclude Include="search.h" />
+    <ClInclude Include="headers\delete.h" />
+    <ClInclude Include="headers\edit.h" />
+    <ClInclude Include="headers\event.h" />
+    <ClInclude Include="headers\mainMenu.h" />
+    <ClInclude Include="headers\search.h" />
+    <ClInclude Include="headers\structs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
